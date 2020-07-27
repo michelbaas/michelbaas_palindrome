@@ -18,11 +18,15 @@ class MichelbaasPalindromeTest < Minitest::Test
   end
 
   def test_integer_non_palindrome
-    accept 12345.palindrome?
+    refute 12345.palindrome?
   end
 
   def test_integer_palindrome
     assert 12321.palindrome?
+  end
+
+  def test_whitespace_non_palindrome
+    refute "  ".palindrome?
   end
 
 end
